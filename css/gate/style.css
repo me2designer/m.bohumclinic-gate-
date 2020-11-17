@@ -37,3 +37,9 @@ body {}
 #secVisual .btn_shop {left:50%;top:20.56vw;margin-left:-46vw;background-image:url('/img/gate_2020/visual_sign_shop.png')}
 #secVisual .btn_fa {left:50%;top:12.84vw;margin-left:2vw;background-image:url('/img/gate_2020/visual_sign_fa.png')}
 
+/* SHOP */
+#secVisual .tit_shop {position:absolute;top:54vw}
+#secVisual .tit_shop .txt {font-family:'HGGGothicssi';font-weight:900;color:#fff;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.6)}
+#secVisual .tit_shop .txt1 {font-size:8.3vw}
+#secVisual .tit_shop .txt2 {font-size:13.4vw;color:#0fc9ff}
+#secVisual .tit_shop .txt3 {font-size:9.4vw}

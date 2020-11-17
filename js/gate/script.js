@@ -37,6 +37,20 @@ $(function(){ // DOCUMENT READY...
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
+
+    /* parallax-bg 값(정렬) */ 
+    var screenW = screen.width;
+    var bgW = $visual.find('.parallax-bg').width();
+    var bgX = (bgW - screenW) * -1;
+    
+    $visual.find('.parallax-bg').attr('data-swiper-parallax',bgX);
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
     
     var swiperSpeed = 600;
 
