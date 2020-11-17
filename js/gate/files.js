@@ -4,13 +4,15 @@ var files = [
     '//fonts.peoplelife.co.kr/fonts/NotoSansKR/NotoSansKR.css',
     '//fonts.peoplelife.co.kr/fonts/HGGGothicssi/HGGGothicssi.css',
     '//public.peoplelife.co.kr/lib/swiper/swiper.css',
+    'lib/swiper/swiper-bundle.min.css',
     '//public.peoplelife.co.kr/css/reset.css',
     '//public.peoplelife.co.kr/css/common_mo.css',
     'css/gate/style.css',
 
     '//public.peoplelife.co.kr/lib/jquery/jquery.js',
     '//public.peoplelife.co.kr/lib/swiper/swiper.js',
-    '/js/gate/script.js',
+    'lib/swiper/swiper-bundle.min.js',
+    'js/gate/script.js',
 ]
 
 for (var i=0; i<files.length; i++){

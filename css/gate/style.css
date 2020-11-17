@@ -12,3 +12,28 @@ body {}
 /****************************************************************************
 	content area
 ****************************************************************************/
+/* swiper */
+#secVisual {position:fixed;width:100%;height:100%}
+#secVisual .swiper-container {height:100%}
+#secVisual .swiper-slide:nth-child(2) {background:url('/img/gate_2020/visual_sign_model.png') 50% 100% no-repeat;background-size:85.42vw}
+#secVisual .parallax-bg {position: absolute;width:calc(var(--vh, 1vh) * 215);height:calc(var(--vh, 1vh) * 100);background-size:100%}
+
+/* swiper - Pagination */
+#secVisual .swiper-pagination {bottom:6.667vw}
+#secVisual .swiper-pagination-bullet {position:relative;width:26.67vw;height:0.8vw;border-radius:0;background:#fff;opacity:1;box-shadow:1px 1px 4px rgba(0, 0, 0, 0.6)}
+#secVisual .swiper-pagination-bullet:after {position:absolute;top:-6vw;left:0;width:100%;font-family:'HGGGothicssi';font-size:2.9vw;font-weight:800;color:#fff;text-align:center;white-space:nowrap;opacity:0.4;text-shadow:1px 1px 2px rgba(0, 0, 0, 0.6)}
+#secVisual .swiper-pagination-bullet:nth-child(1):after {content:'보험샵으로 고객방문'}
+#secVisual .swiper-pagination-bullet:nth-child(2):after {content:'보험클리닉 찾기'}
+#secVisual .swiper-pagination-bullet:nth-child(3):after {content:'전문가 직접 방문'}
+#secVisual .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {background-color:#20d8ff}
+#secVisual .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {background-color:#ffefd0}
+#secVisual .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {background-color:#fdc314}
+#secVisual .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active:after {color:#20d8ff;opacity:1}
+#secVisual .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active:after {color:#ffefd0;opacity:1}
+#secVisual .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active:after {color:#fdc314;opacity:1}
+
+/* SIGN(이정표) */
+#secVisual .btn_sign {position:absolute;width:45.33vw;height:15.2vw;background:0 0 no-repeat;background-size:cover}
+#secVisual .btn_shop {left:50%;top:20.56vw;margin-left:-46vw;background-image:url('/img/gate_2020/visual_sign_shop.png')}
+#secVisual .btn_fa {left:50%;top:12.84vw;margin-left:2vw;background-image:url('/img/gate_2020/visual_sign_fa.png')}
+
