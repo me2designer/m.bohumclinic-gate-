@@ -95,7 +95,7 @@ $(function(){ // DOCUMENT READY...
         $info.addClass('active');
     });
 
-    $info.on('click', function() {
+    $info.find('.btn_info').on('click', function() {
         $footer.addClass('active');
         $info.removeClass('active');
     });
