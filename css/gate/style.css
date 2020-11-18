@@ -51,8 +51,26 @@
 #secVisual .btn_sign {position:absolute;width:45.33vw;height:15.2vw;background:0 0 no-repeat;background-size:cover}
 #secVisual .btn_shop {left:50%;top:-15.2vw;margin-left:-46vw;background-image:url('/img/gate_2020/visual_sign_shop.png')}
 #secVisual .btn_fa {left:50%;top:-15.2vw;margin-left:2vw;background-image:url('/img/gate_2020/visual_sign_fa.png')}
+#secVisual .hand {position:absolute;width:10.4vw;height:10.4vw;background:url('/img/gate_2020/ico_hand.png') 0 0 no-repeat;background-size:cover;transform-origin:bottom center}
+#secVisual .hand::after {content:'';position:absolute;width:6.533vw;height:3.733vw;background:0 0 no-repeat;background-size:cover}
+#secVisual .hand_shop {top:44vw;left:20vw;animation:handShop 1s  alternate infinite}
+#secVisual .hand_shop:after {left:-1.5vw;top:-1vw;background-image:url('/img/gate_2020/ico_hand_arr_shop.png');animation:handShopArr 1s alternate infinite}
+#secVisual .hand_fa {top:36vw;right:20vw;animation:handFa 1s alternate infinite}
+#secVisual .hand_fa:after {right:-0.2vw;top:-1vw;background-image:url('/img/gate_2020/ico_hand_arr_fa.png');animation:handFaArr 1s alternate infinite}
 #wrap.active #secVisual .btn_shop {top:20.56vw;opacity:1;transition:top 1.5s ease-in-out, opacity 0.5s;}
 #wrap.active #secVisual .btn_fa {top:12.84vw;opacity:1;transition:top 1s ease-in-out, opacity 0.2s;}
+@keyframes handShop {
+    80%,100%        {transform:rotate(-30deg)}
+}
+@keyframes handFa {
+    80%,100%        {transform:rotate(30deg)}
+}
+@keyframes handShopArr {
+    80%,100%        {left:-1.2vw;top:-2.2vw;transform:rotate(30deg)}
+}
+@keyframes handFaArr {
+    80%,100%        {right:0vw;top:-2.2vw;transform:rotate(-30deg)}
+}
 
 /* SHOP */
 #secVisual .tit_shop {position:absolute;top:54vw;left:5vw}
