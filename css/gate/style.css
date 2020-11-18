@@ -39,36 +39,65 @@ body {}
 
 /* SHOP */
 #secVisual .tit_shop {position:absolute;top:54vw;left:5vw}
-#secVisual .tit_shop .txt {padding-left:10vw;font-family:'HGGGothicssi';font-weight:900;color:#fff;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.6);opacity:0;transition:all 0.8s ease-in-out}
+#secVisual .tit_shop .txt {margin-top:3vw;font-family:'HGGGothicssi';font-weight:900;color:#fff;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.6);opacity:0;transition:all 0.2s ease-in-out}
 #secVisual .tit_shop .txt1 {font-size:8.3vw}
 #secVisual .tit_shop .txt2 {font-size:13.4vw;color:#0fc9ff}
 #secVisual .tit_shop .txt3 {font-size:9.4vw}
-#secVisual .link_shop {position:absolute;top:210px;display:block;width:80px;height:80px;border-radius:100%;background-color:#0096ff;box-shadow:0 0 10px rgba(9, 194, 233, 1);animation:shopLinkCircle 1s infinite}
+#secVisual .link_shop {position:absolute;top:110vw;left:55vw;display:block;width:20vw;height:20vw;border-radius:100%;background-color:#0096ff;box-shadow:0 0 2vw rgba(9, 194, 233, 1);opacity:0;transition:opacity 0.5s;animation:linkCircle 1s infinite, linkCirlceZiggle 1s infinite alternate ease-in-out}
 #secVisual .link_shop:before,
-#secVisual .link_shop:after {content:'';position:absolute;top:50%;left:50%;width:90px;height:90px;border:3px solid #0096ff;border-radius:100%;box-shadow:0 0 10px rgba(9, 194, 233, 1), inset 0 0 10px rgba(9, 194, 233, 1);transform:translate(-50%, -50%);opacity:0;}
-#secVisual .link_shop:before {animation:shopLinkCircle1 1s infinite}
-#secVisual .link_shop:after {animation:shopLinkCircle2 1s  0.2s infinite}
-#secVisual .link_shop span {position:absolute;top:50%;left:50%;z-index:1;font-family:'HGGGothicssi';font-size:26px;font-weight:800;color:#fff;white-space:nowrap;transform:translate(-50%, -50%)}
-#secVisual .swiper-slide-active .tit_shop .txt {padding-left:0;opacity:1}
-#secVisual .swiper-slide-active .tit_shop .txt2 {transition-delay:0.3s;animation:titShopGlow 1s alternate infinite}
-#secVisual .swiper-slide-active .tit_shop .txt3 {transition-delay:0.6s}
+#secVisual .link_shop:after {content:'';position:absolute;top:50%;left:50%;width:22vw;height:22vw;border:0.6vw solid #0096ff;border-radius:100%;box-shadow:0 0 2vw rgba(9, 194, 233, 1), inset 0 0 2vw rgba(9, 194, 233, 1);transform:translate(-50%, -50%);opacity:0;}
+#secVisual .link_shop:before {animation:linkCircle1 1s infinite}
+#secVisual .link_shop:after {animation:linkCircle2 1s  0.2s infinite}
+#secVisual .link_shop span {position:absolute;top:50%;left:50%;z-index:1;font-family:'HGGGothicssi';font-size:7vw;font-weight:800;color:#fff;white-space:nowrap;transform:translate(-50%, -50%)}
+#secVisual .swiper-slide-active .tit_shop .txt {margin-top:0.5vw;opacity:1;transition:all 0.6s 0.2s ease-in-out}
+#secVisual .swiper-slide-active .tit_shop .txt2 {transition:all 0.6s 0.4s ease-in-out;text-shadow:0 0 1vw #1300f9;animation:titShopGlow 1.5s alternate infinite ease-in-out}
+#secVisual .swiper-slide-active .tit_shop .txt3 {transition:all 0.6s 0.6s ease-in-out}
+#secVisual .swiper-slide-active .link_shop {opacity:1;transition:opacity 1s 1.2s}
 @keyframes titShopGlow {
-    100%        {text-shadow:0 0 5vw #1300f9}
+    50%,100%        {text-shadow:0 0 4vw #1300f9}
 }
-@keyframes shopLinkArr {
-    100%            {transform:translateY(7px)}
+
+
+/* FA */
+#secVisual .tit_fa {padding-top:20vw;}
+#secVisual .tit_fa .txt {margin-top:3vw;font-family:'HGGGothicssi';font-weight:900;color:#fff;text-align:center;text-shadow:2px 2px 4px rgba(0, 0, 0, 0.6);opacity:0;transition:all 0.2s ease-in-out}
+#secVisual .tit_fa .txt1 {font-size:7.333vw}
+#secVisual .tit_fa .txt2 {position:relative;padding-top:4vw;font-size:7.333vw;color:#fdc314}
+#secVisual .tit_fa .txt2 em {color:#fd8d14}
+#secVisual .tit_fa .txt2 i {display:block;position:absolute;top:1vw;left:50%;width:1.5vw;height:1.5vw;border-radius:100%;box-shadow:2px 2px 4px rgba(0, 0, 0, 0.6)}
+#secVisual .tit_fa .txt2 i:nth-child(1) {margin-left:-20.5vw;background-color:#fd8d14}
+#secVisual .tit_fa .txt2 i:nth-child(2) {margin-left:-14.5vw;background-color:#fd8d14}
+#secVisual .tit_fa .txt2 i:nth-child(3) {margin-left:-3.5vw;background-color:#fdc314}
+#secVisual .tit_fa .txt2 i:nth-child(4) {margin-left:2.5vw;background-color:#fdc314}
+#secVisual .tit_fa .txt2 i:nth-child(5) {margin-left:9vw;background-color:#fdc314}
+#secVisual .tit_fa .txt2 i:nth-child(6) {margin-left:19.5vw;background-color:#fd8d14}
+#secVisual .tit_fa .txt3 {font-size:11.73vw;color:#fdc314}
+#secVisual .tit_fa .txt4 {font-size:8.267vw}
+#secVisual .link_fa {position:absolute;top:110vw;left:42vw;display:block;width:20vw;height:20vw;border-radius:100%;background-color:#ed7d04;box-shadow:0 0 2vw rgba(237, 158, 4, 1);opacity:0;transition:opacity 0.5s;animation:linkCircle 1s infinite, linkCirlceZiggle 1s infinite alternate ease-in-out}
+#secVisual .link_fa:before,
+#secVisual .link_fa:after {content:'';position:absolute;top:50%;left:50%;width:22vw;height:22vw;border:0.6vw solid #fff3a1;border-radius:100%;box-shadow:0 0 2vw rgba(237, 158, 4, 1), inset 0 0 2vw rgba(237, 158, 4, 1);transform:translate(-50%, -50%);opacity:0;}
+#secVisual .link_fa:before {animation:linkCircle1 1s infinite}
+#secVisual .link_fa:after {animation:linkCircle2 1s  0.2s infinite}
+#secVisual .link_fa span {position:absolute;top:50%;left:50%;z-index:1;font-family:'HGGGothicssi';font-size:7vw;font-weight:800;color:#fff;white-space:nowrap;transform:translate(-50%, -50%)}
+#secVisual .swiper-slide-active .tit_fa .txt {margin-top:1vw;opacity:1;transition:all 0.6s 0.2s ease-in-out}
+#secVisual .swiper-slide-active .tit_fa .txt2 {transition:all 0.6s 0.4s ease-in-out}
+#secVisual .swiper-slide-active .tit_fa .txt3 {transition:all 0.6s 0.6s ease-in-out}
+#secVisual .swiper-slide-active .tit_fa .txt4 {transition:all 0.6s 0.8s ease-in-out}
+#secVisual .swiper-slide-active .link_fa {opacity:1;transition:opacity 1s 1.4s}
+@keyframes linkCirlceZiggle {
+    100%        {transform: translateY(2vw)}
 }
-@keyframes shopLinkCircle {
-    0%, 30%         {width:80px;height:80px;margin:0}
-    10%             {width:86px;height:86px;margin:-3px 0 0 -3px;}
+@keyframes linkCircle {
+    0%, 30%         {width:20vw;height:20vw;margin:0}
+    10%             {width:22vw;height:22vw;margin:-1vw 0 0 -1vw}
 }
-@keyframes shopLinkCircle1 {
+@keyframes linkCircle1 {
     30%, 60%         {opacity:1}
     90%, 100%        {opacity:0}
-    100%             {width:140px;height:140px}
+    100%             {width:35vw;height:35vw}
 }
-@keyframes shopLinkCircle2 {
+@keyframes linkCircle2 {
     30%, 60%         {opacity:0.6}
     90%, 100%        {opacity:0}
-    100%             {width:140px;height:140px}
+    100%             {width:35vw;height:35vw}
 }

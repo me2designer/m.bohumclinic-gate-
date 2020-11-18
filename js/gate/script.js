@@ -39,10 +39,10 @@ $(function(){ // DOCUMENT READY...
 
 
     /* parallax-bg 값(정렬) */ 
-    var screenW = screen.width;
+    var winW = window.innerWidth;
     var bgW = $visual.find('.parallax-bg').width();
-    var bgX = (bgW - screenW) * -1;
-    
+    var bgX = (bgW - winW) * -1;
+
     $visual.find('.parallax-bg').attr('data-swiper-parallax',bgX);
 
 
@@ -64,18 +64,10 @@ $(function(){ // DOCUMENT READY...
                 return '<span class="' + className + '"></span>';
             },
         },
-        // pagination: {
-        //   el: '.swiper-pagination',
-        //   clickable: true,
-        // },
-        // navigation: {
-        //   nextEl: '.swiper-button-next',
-        //   prevEl: '.swiper-button-prev',
-        // },
     });
 
     
-    swiper.slideTo($visual.find('.swiper-slide:eq(0)').index(), 0, false);
+    swiper.slideTo($visual.find('.swiper-slide:eq(2)').index(), 0, false);
 
     // SHOP 이동버튼
     $visual.find('.btn_sign').on('click', function () {
