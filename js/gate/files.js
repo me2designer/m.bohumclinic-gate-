@@ -1,7 +1,7 @@
 cache = '?v='+(new Date).getTime();
 
 var files = [
-    '//fonts.peoplelife.co.kr/fonts/NotoSansKR/NotoSansKR.css',
+    '//fonts.peoplelife.co.kr/fonts/SCDream/SCDream.css',
     '//fonts.peoplelife.co.kr/fonts/HGGGothicssi/HGGGothicssi.css',
     '//public.peoplelife.co.kr/lib/swiper/swiper.css',
     'lib/swiper/swiper-bundle.min.css',

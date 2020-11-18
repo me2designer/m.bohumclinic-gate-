@@ -1,5 +1,7 @@
 var $mainWrap = $('#wrap');
 var $visual = $('#secVisual');
+var $info = $('#banner_info');
+var $footer = $('#footer');
 
 
 $(function(){ // DOCUMENT READY...
@@ -10,7 +12,7 @@ $(function(){ // DOCUMENT READY...
 
 
     /* start */
-    $mainWrap.css({
+    $mainWrap.addClass('active').css({
         visibility: 'visible',
         opacity : 1
     });
@@ -38,7 +40,7 @@ $(function(){ // DOCUMENT READY...
 */(function(){
 
 
-    /* parallax-bg 값(정렬) */ 
+    /* parallax-bg 값(정렬) */
     var winW = window.innerWidth;
     var bgW = $visual.find('.parallax-bg').width();
     var bgX = (bgW - winW) * -1;
@@ -51,7 +53,7 @@ $(function(){ // DOCUMENT READY...
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
-    
+
     var swiperSpeed = 600;
 
     swiper = new Swiper('.swiper-container', {
@@ -66,7 +68,7 @@ $(function(){ // DOCUMENT READY...
         },
     });
 
-    
+
     swiper.slideTo($visual.find('.swiper-slide:eq(1)').index(), 0, false);
 
     // SHOP 이동버튼
@@ -85,6 +87,18 @@ $(function(){ // DOCUMENT READY...
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
+
+
+    /* FOOTER */
+    $footer.find('.btn_close').on('click', function() {
+        $footer.removeClass('active');
+        $info.addClass('active');
+    });
+
+    $info.on('click', function() {
+        $footer.addClass('active');
+        $info.removeClass('active');
+    });
 
 
 

@@ -32,6 +32,8 @@
 <body>
 <!-- #wrap -->
 <div id="wrap" class="mainWrap" data-target-device="mo" data-grid-width="auto">
+<!-- #container -->
+<div id="container" role="main">
     <!-- 메인 비주얼  -->
     <section id="secVisual">
         <div class="swiper-container">
@@ -61,10 +63,31 @@
             </div>
 
             <!-- Add Pagination -->
-		<div class="swiper-pagination"></div>
+		    <div class="swiper-pagination"></div>
         </div>
-    </section>
+    </section>    
     <!-- //메인 비주얼  -->
+
+    <!-- 기업정보 자세히보기 -->
+    <aside id="banner_info" class="active" style="">
+        <button class="btn_info" type="button"><span class="screen_out">기업정보 자세히보기</span></button>
+    </aside>
+    <!-- //기업정보 자세히보기 -->
+
+</div>
+<!-- //#container -->
+
+<!-- FOOTER -->
+<footer id="footer" class="footer" role="contentinfo" style="opacity:0">
+    <address class="list_addr">
+        <p>㈜피플라이프<i class="borderline"></i>대표이사 : 현학진</p>
+        <p>서울 동작구 동작대로 59, 3층(사당동, 쌍립빌딩)</p>
+        <p class="lst">Copyright 2020. Peoplelife all rights reserved.</p>
+    </address>
+    <button class="btn_close" type="button"><span class="screen_out">CLOSE</span></button>
+    <button class="btn_phone" onclick="location.href='tel:1833-6114'" type="button"><span>1833-6114</span></button>
+</footer> 
+<!-- //FOOTER -->
 </div>
 <!-- //#wrap -->
 </body>
