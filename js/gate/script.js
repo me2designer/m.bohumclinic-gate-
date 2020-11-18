@@ -67,7 +67,7 @@ $(function(){ // DOCUMENT READY...
     });
 
     
-    swiper.slideTo($visual.find('.swiper-slide:eq(2)').index(), 0, false);
+    swiper.slideTo($visual.find('.swiper-slide:eq(1)').index(), 0, false);
 
     // SHOP 이동버튼
     $visual.find('.btn_sign').on('click', function () {
