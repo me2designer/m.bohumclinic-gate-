@@ -1,6 +1,7 @@
 var $mainWrap = $('#wrap');
 var $visual = $('#secVisual');
 var $info = $('#banner_info');
+var $loding= $('#loding');
 var $footer = $('#footer');
 
 
@@ -54,6 +55,7 @@ $(function(){ // DOCUMENT READY...
 */(function(){
 
 
+    /* swiper */
     var swiperSpeed = 600;
 
     swiper = new Swiper('.swiper-container', {
@@ -81,6 +83,38 @@ $(function(){ // DOCUMENT READY...
             swiper.slideTo($visual.find('.swiper-slide:eq(2)').index(), swiperSpeed, false);
         }
     });
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 페이지 이동 */ 
+    $visual.find('.link_shop, .link_fa').on('click', function() {
+        var $this = $(this);
+        
+        if ($this.hasClass('link_shop')){
+            $mainWrap.addClass('locationShop');
+            $loding.show();
+            setTimeout(function(){
+                location.href = "//m.bohumclinic.com/shop"
+            }, 500);
+        } else {
+            $mainWrap.addClass('locationFa');
+            $loding.show();
+            setTimeout(function(){
+                location.href = "//m.bohumclinic.com/visit"
+            }, 1000);
+        }
+
+        $loding.on('click', function() {
+            $loding.hide();            
+        });
+    });
+
 
 
 })();/*

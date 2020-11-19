@@ -23,6 +23,15 @@
 #footer .btn_phone span {display:inline-block;font-size:3.467vw;color:#ffe5b1;line-height:1em;vertical-align:middle;letter-spacing:0.02em}
 #footer.active {opacity:1 !important;transform:translateY(0)}
 
+#loding {display:none;position:fixed;top:0;bottom:0;left:0;right:0;z-index:100;background-color:rgba(0,0,0,.7)}
+#loding:after {content:'Loding..';position:absolute;left:50%;top:50%;font-family:'HGGGothicssi';font-size:2.9vw;color:#fff;transform:translate(-50%,-50%);text-shadow:1px 1px 2px #000;}
+#loding .circle {position:absolute;left:50%;top:50%;width:18vw;height:18vw;border:1vw solid #0fc9ff;border-top:1vw solid transparent;border-radius:100%;transform:translate(-50%,-50%);transition:all 0.2s;animation:lodingCircle 0.8s infinite linear}
+.locationFa #loding .circle {border-color:transparent #fdc314 #fdc314 #fdc314}
+@keyframes lodingCircle {
+    from        {transform:translate(-50%,-50%) rotate(0)}
+    to          {transform:translate(-50%,-50%) rotate(360deg)}
+}
+
 
 /****************************************************************************
 	content area
@@ -49,27 +58,39 @@
 
 /* SIGN(이정표) */
 #secVisual .btn_sign {position:absolute;width:45.33vw;height:15.2vw;background:0 0 no-repeat;background-size:cover}
-#secVisual .btn_shop {left:50%;top:-15.2vw;margin-left:-46vw;background-image:url('/img/gate_2020/visual_sign_shop.png')}
-#secVisual .btn_fa {left:50%;top:-15.2vw;margin-left:2vw;background-image:url('/img/gate_2020/visual_sign_fa.png')}
+#secVisual .btn_shop {left:50%;top:-15.2vw;margin-left:-46vw;background-image:url('/img/gate_2020/visual_sign_shop.png');transform-origin:center right}
+#secVisual .btn_fa {left:50%;top:-15.2vw;margin-left:2vw;background-image:url('/img/gate_2020/visual_sign_fa.png');transform-origin:center left}
 #secVisual .hand {position:absolute;width:10.4vw;height:10.4vw;background:url('/img/gate_2020/ico_hand.png') 0 0 no-repeat;background-size:cover;transform-origin:bottom center}
 #secVisual .hand::after {content:'';position:absolute;width:6.533vw;height:3.733vw;background:0 0 no-repeat;background-size:cover}
 #secVisual .hand_shop {top:44vw;left:20vw;animation:handShop 1s  alternate infinite}
 #secVisual .hand_shop:after {left:-1.5vw;top:-1vw;background-image:url('/img/gate_2020/ico_hand_arr_shop.png');animation:handShopArr 1s alternate infinite}
 #secVisual .hand_fa {top:36vw;right:20vw;animation:handFa 1s alternate infinite}
 #secVisual .hand_fa:after {right:-0.2vw;top:-1vw;background-image:url('/img/gate_2020/ico_hand_arr_fa.png');animation:handFaArr 1s alternate infinite}
-#wrap.active #secVisual .btn_shop {top:20.56vw;opacity:1;transition:top 1.5s ease-in-out, opacity 0.5s;}
-#wrap.active #secVisual .btn_fa {top:12.84vw;opacity:1;transition:top 1s ease-in-out, opacity 0.2s;}
+#wrap.active #secVisual .btn_shop {top:20.56vw;opacity:1;transition:top 1.5s ease-in-out, opacity 0.5s;animation:signBtnLoop 2s 2s infinite linear}
+#wrap.active #secVisual .btn_fa {top:12.84vw;opacity:1;transition:top 1s ease-in-out, opacity 0.2s;animation:signBtnLoop 2s 3s infinite linear}
 @keyframes handShop {
-    80%,100%        {transform:rotate(-30deg)}
+    100%        {transform:rotate(-30deg)}
 }
 @keyframes handFa {
-    80%,100%        {transform:rotate(30deg)}
+    100%        {transform:rotate(30deg)}
 }
 @keyframes handShopArr {
-    80%,100%        {left:-1.2vw;top:-2.2vw;transform:rotate(30deg)}
+    100%        {left:-1.2vw;top:-2.2vw;transform:rotate(30deg)}
 }
 @keyframes handFaArr {
-    80%,100%        {right:0vw;top:-2.2vw;transform:rotate(-30deg)}
+    100%        {right:0vw;top:-2.2vw;transform:rotate(-30deg)}
+}
+@keyframes signBtnLoop {
+    8%                    {transform:perspective(3000px) rotateY(-10deg);filter:brightness(1.2)}
+    16%                   {transform:perspective(3000px) rotateY(10deg);filter:brightness(0.6)}
+    22%                   {transform:perspective(3000px) rotateY(-8deg);filter:brightness(1)}
+    28%                   {transform:perspective(3000px) rotateY(8deg);filter:brightness(0.8)}
+    33%                   {transform:perspective(3000px) rotateY(-6deg);filter:brightness(1)}
+    38%                   {transform:perspective(3000px) rotateY(5deg);filter:brightness(0.85)}
+    42%                   {transform:perspective(3000px) rotateY(-3deg);filter:brightness(1)}
+    45%                   {transform:perspective(3000px) rotateY(2deg);filter:brightness(0.95)}
+    48%                   {transform:perspective(3000px) rotateY(-2deg);filter:brightness(1)}
+    50%,100%              {transform:perspective(3000px) rotateY(0);filter:brightness(0.95)}
 }
 
 /* SHOP */
@@ -91,6 +112,8 @@
 @keyframes titShopGlow {
     50%,100%        {text-shadow:0 0 4vw #0042f9}
 }
+
+
 
 /* FA */
 #secVisual .tit_fa {padding-top:20vw;}
