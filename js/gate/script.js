@@ -58,7 +58,7 @@ $(function(){ // DOCUMENT READY...
     /* swiper */
     var swiperSpeed = 600;
 
-    swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container', {
         speed: swiperSpeed,
         parallax: true,
         pagination: {
@@ -70,10 +70,10 @@ $(function(){ // DOCUMENT READY...
         },
     });
 
-
+    // 시작 위치 설정
     swiper.slideTo($visual.find('.swiper-slide:eq(1)').index(), 0, false);
 
-    // SHOP 이동버튼
+    // SHOP, FA 이동버튼
     $visual.find('.btn_sign').on('click', function () {
         var $this = $(this);
 
@@ -81,6 +81,19 @@ $(function(){ // DOCUMENT READY...
             swiper.slideTo($visual.find('.swiper-slide:eq(0)').index(), swiperSpeed, false);
         } else {
             swiper.slideTo($visual.find('.swiper-slide:eq(2)').index(), swiperSpeed, false);
+        }
+    });
+
+    // $info - fadeIn & fadeOut
+    swiper.on('slideChange',function(){
+        if (this.activeIndex !== 1){
+            $info.stop().animate({ opacity : 0 }, 100).addClass('antiTouch');
+        } else {
+            $info.stop().animate({
+                opacity : 1
+            }, 100, function(){
+                $info.removeAttr('style');
+            }).removeClass('antiTouch');
         }
     });
 
@@ -92,10 +105,10 @@ $(function(){ // DOCUMENT READY...
 
 
 
-    /* 페이지 이동 */ 
+    /* 페이지 이동 */
     $visual.find('.link_shop, .link_fa').on('click', function() {
         var $this = $(this);
-        
+
         if ($this.hasClass('link_shop')){
             $mainWrap.removeClass('locationFa').addClass('locationShop');
             $loding.show();
@@ -111,7 +124,7 @@ $(function(){ // DOCUMENT READY...
         }
 
         $loding.on('click', function() {
-            $loding.hide();            
+            $loding.hide();
         });
     });
 
