@@ -97,13 +97,13 @@ $(function(){ // DOCUMENT READY...
         var $this = $(this);
         
         if ($this.hasClass('link_shop')){
-            $mainWrap.addClass('locationShop');
+            $mainWrap.removeClass('locationFa').addClass('locationShop');
             $loding.show();
             setTimeout(function(){
                 location.href = "//m.bohumclinic.com/shop"
             }, 500);
         } else {
-            $mainWrap.addClass('locationFa');
+            $mainWrap.removeClass('locationShop').addClass('locationFa');
             $loding.show();
             setTimeout(function(){
                 location.href = "//m.bohumclinic.com/visit"
