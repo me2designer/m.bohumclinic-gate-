@@ -4,14 +4,14 @@ var files = [
     '//fonts.peoplelife.co.kr/fonts/SCDream/SCDream.css',
     '//fonts.peoplelife.co.kr/fonts/HGGGothicssi/HGGGothicssi.css',
     '//public.peoplelife.co.kr/lib/swiper/swiper.css',
-    'lib/swiper/swiper-bundle.min.css',
+    //'lib/swiper/swiper-bundle.min.css',
     '//public.peoplelife.co.kr/css/reset.css',
     '//public.peoplelife.co.kr/css/common_mo.css',
     'css/gate_2020/style.css',
 
     '//public.peoplelife.co.kr/lib/jquery/jquery.js',
     '//public.peoplelife.co.kr/lib/swiper/swiper.js',
-    'lib/swiper/swiper-bundle.min.js',
+    //'lib/swiper/swiper-bundle.min.js',
     'js/gate_2020/script.js',
 ]
 
