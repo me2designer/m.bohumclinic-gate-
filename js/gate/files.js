@@ -32,3 +32,10 @@ for (var i=0; i<files.length; i++){
         (document.getElementsByTagName('HEAD')[0]||document.body).appendChild(el);
     }
 }
+
+// 이미지 캐시제거
+var nods = document.getElementsByTagName('img');
+for (var i = 0; i < nods.length; i++)
+{
+    nods[i].attributes['src'].value += "?a=" + cache;
+}
