@@ -29,6 +29,11 @@
 #footer .btn_phone span {display:inline-block;font-size:3.467vw;color:#ffe5b1;line-height:1em;vertical-align:middle;letter-spacing:0.02em}
 #footer.active {opacity:1 !important;transform:translateY(0)}
 
+
+/****************************************************************************
+	Layer
+****************************************************************************/
+/* LDOING */
 #loding {display:none;position:fixed;top:0;bottom:0;left:0;right:0;z-index:100;background-color:rgba(0,0,0,.7)}
 #loding:after {content:'Loding..';position:absolute;left:50%;top:50%;font-family:'HGGGothicssi';font-size:2.9vw;color:#fff;transform:translate(-50%,-50%);text-shadow:1px 1px 2px #000;}
 #loding .circle {position:absolute;left:50%;top:50%;width:18vw;height:18vw;border:1vw solid #0fc9ff;border-top:1vw solid transparent;border-radius:100%;transform:translate(-50%,-50%);transition:all 0.2s;animation:lodingCircle 0.8s infinite linear}
@@ -53,9 +58,11 @@
 #secVisual .swiper-pagination {bottom:6.667vw}
 #secVisual .swiper-pagination-bullet {position:relative;width:26.67vw;height:0.8vw;border-radius:0;background:#fff;opacity:1;box-shadow:1px 1px 4px rgba(0, 0, 0, 0.6)}
 #secVisual .swiper-pagination-bullet:after {position:absolute;top:-6vw;left:0;width:100%;font-family:'HGGGothicssi';font-size:3.2vw;font-weight:800;color:#fff;text-align:center;white-space:nowrap;opacity:0.4;text-shadow:1px 1px 2px rgba(0, 0, 0, 0.6)}
+#secVisual .swiper-pagination-bullet #ico_home {fill:#fff;filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.6));position:absolute;width:5vw;height:auto;top:-6.6vw;margin-left:-6.5vw;opacity:0.4}
 #secVisual .swiper-pagination-bullet:nth-child(1):after {content:'보험샵으로 고객방문'}
-#secVisual .swiper-pagination-bullet:nth-child(2):after {content:'보험클리닉 찾기'}
+#secVisual .swiper-pagination-bullet:nth-child(2):after {content:'HOME';margin-left:3.5vw}
 #secVisual .swiper-pagination-bullet:nth-child(3):after {content:'전문가 직접 방문'}
+#secVisual .swiper-pagination-bullet.swiper-pagination-bullet-active #ico_home {fill:#ffefd0;opacity:1}
 #secVisual .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {background-color:#20d8ff}
 #secVisual .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {background-color:#ffefd0}
 #secVisual .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {background-color:#fdc314}

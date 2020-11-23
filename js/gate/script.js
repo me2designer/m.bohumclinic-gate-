@@ -12,6 +12,54 @@ $(function(){ // DOCUMENT READY...
 
 
 
+    /* SVG invert - 참고 : https://tinyurl.com/y68wczgc */
+    svgImport = function (callback){
+        $('img.svg').each(function(){
+
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Add replaced image's ID to the new SVG
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                // Remove any invalid XML tags as per http://validator.w3.org
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+                if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+                }
+
+                // Replace image with new SVG
+                $img.replaceWith($svg);
+
+                if(callback) callback();
+
+            }, 'xml');
+        });
+    }
+    svgImport();
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
     /* start */
     $mainWrap.addClass('active').css({
         visibility: 'visible',
@@ -64,11 +112,17 @@ $(function(){ // DOCUMENT READY...
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            renderBullet: function (index, className) {
+            renderBullet: function (index, className) {                
                 return '<span class="' + className + '"></span>';
             },
         },
     });
+
+    // HOME 아이콘 추가
+    var $paging = $visual.find('.swiper-pagination');                
+
+    $paging.find('.swiper-pagination-bullet:eq(1)').prepend('<img class="svg" src="/img/gate_2020/ico_home.svg">');
+    svgImport();
 
     // 시작 위치 설정
     swiper.slideTo($visual.find('.swiper-slide:eq(1)').index(), 0, false);
@@ -85,20 +139,22 @@ $(function(){ // DOCUMENT READY...
     });
 
     // $info - fadeIn & fadeOut
-    swiper.on('slideChange',function(){
-        if (this.activeIndex !== 1){
-            $info.stop().animate({ opacity : 0 }, 100).addClass('antiTouch');
-        } else {
-            $info.stop().animate({
-                opacity : 1
-            }, 100, function(){
-                $info.removeAttr('style');
-            }).removeClass('antiTouch');
-        }
-    });
+    // swiper.on('slideChange',function(){
+    //     if (this.activeIndex !== 1){
+    //         $info.stop().animate({ opacity : 0 }, 100).addClass('antiTouch');
+    //     } else {
+    //         $info.stop().animate({
+    //             opacity : 1
+    //         }, 100, function(){
+    //             $info.removeAttr('style');
+    //         }).removeClass('antiTouch');
+    //     }
+    // });
+
+    
 
 
-
+   
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
