@@ -7,12 +7,12 @@ var files = [
     'lib/swiper/swiper-bundle.min.css',
     '//public.peoplelife.co.kr/css/reset.css',
     '//public.peoplelife.co.kr/css/common_mo.css',
-    'css/gate/style.css',
+    'css/gate_2020/style.css',
 
     '//public.peoplelife.co.kr/lib/jquery/jquery.js',
     '//public.peoplelife.co.kr/lib/swiper/swiper.js',
     'lib/swiper/swiper-bundle.min.js',
-    'js/gate/script.js',
+    'js/gate_2020/script.js',
 ]
 
 for (var i=0; i<files.length; i++){
